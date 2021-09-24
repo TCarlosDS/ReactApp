@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Footer = () => (
     <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
     <div class="container">

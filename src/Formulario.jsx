@@ -1,28 +1,26 @@
 import React,{Component} from 'react';
 import { render } from 'react-dom';
+import PropTypes from 'prop-types';
 
 class Formulario extends Component{
     constructor(props){
-        super(props);
-        this.state={
-            nombre="nuevo nombre"
+        super(props)
         }
-    }
+    
 render(){
     return(
-        <div>
+        <div id="elemento">
         <h1>Formulario</h1>
-        <form>
-            <input type="text" name="nombre" 
-            onChange={
-                (i)=>this.setState({
-                    nombre: i.target.value
-                })
-                }/>
-            <input type="submit" value="Guardar" />
+        <form action="">
+            <label htmlFor="">Nombre</label><br/>
+            <input type="text" name="nombre"/><br/>
+            <label htmlFor="">Apellido</label><br/>
+            <input type="text" name="apellido" /><br/>
+            <input type="submit" value="enviar"/><br/>
         </form>
         </div>
         )
     }
-}
+}    
+
 export default Formulario;

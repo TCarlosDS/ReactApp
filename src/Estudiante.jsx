@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const Estudiante = (props) =>(
     <div>
@@ -11,6 +12,8 @@ const Estudiante = (props) =>(
             <p className="">Nombre: {props.nombre}</p>
             <p className="">Edad: {props.edad}</p>
             <p className="">Genero: {props.genero}</p>
+            <p className="">Genero: {props.id}</p>
+            <p><Link to={`/estudiantes/${props.id}`}>Detalle</Link></p>
         </td>
         <td class="">
                         <img class="w-50 h-25 rounded float-end" src={props.img} />

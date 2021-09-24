@@ -1,6 +1,4 @@
-import React  from 'react';
-import Estudiante from './Estudiante';
-
+import React from 'react';
 const estudiantes = [
     {
         "id": 1,
@@ -101,12 +99,42 @@ const estudiantes = [
         "img": "https://images.clarin.com/2020/09/07/el-personaje-de-godinez-era___dP-nqI7VJ_1200x630__1.jpg"
     }
 ]
-const Contenedor = () => (
-    <>
-         {
-             estudiantes.map ( c => <Estudiante id={ c.id } nombre = { c.nombre } edad = { c.edad } genero = { c.genero } img = {c.img}/>)
-         }
-    </>
-);
 
-export default Contenedor;
+const EstudianteDetalle=({match})=>{
+    const estudiante = estudiantes.filter(c=>c.id===parseInt(match.params.id))[0];
+    return(
+        <>
+        {
+            estudiante ? (
+                <div>
+                <div class="card" >
+                <div class="card-body ">
+                <table className="table">
+                    <tr>
+                    <td class="w-50 h-25">
+                        <p className="">Nombre: {estudiante.nombre}</p>
+                        <p className="">Edad: {estudiante.edad}</p>
+                        <p className="">Genero: {estudiante.genero}</p>
+                    </td>
+                    <td class="">
+                                    <img class="w-50 h-25 rounded float-end" src={estudiante.img} />
+            
+                    </td>
+                    
+                    </tr>
+                    </table>
+                        {/* ternario para validadr un promp */}
+                        {/*props.nombre ? props.nombre : "no hay nombre"*/}
+                        </div>    
+                </div>
+                <br/>
+                </div>        
+            ):
+            <h1>El id no esta registrado</h1>
+        }
+        <a href={`/estudiantes`}>Ver todos</a>
+        </>
+    );
+    
+}
+export default EstudianteDetalle;
