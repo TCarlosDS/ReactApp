@@ -54,7 +54,7 @@ class DatosApi extends Component {
                       <p className="">Edad: {u.edad}</p>
                       <p className="">Genero: {u.genero}</p>
                       <p className="">Genero: {u.id}</p>
-                      <p><Link to={`/estudiantes/${u.id}`}>Detalle</Link></p>
+                      <p><Link to={`/ChavoApi/${u.id}`}>Detalle</Link></p>
                   </td>
                   <td class="">
                                   <img class="w-50 h-25 rounded float-end" src={u.img} />

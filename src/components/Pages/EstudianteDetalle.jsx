@@ -132,7 +132,7 @@ const EstudianteDetalle=({match})=>{
             ):
             <h1>El id no esta registrado</h1>
         }
-        <a href={`/estudiantes`}>Ver todos</a>
+        <a href={`/ChavoApi`}>Ver todos</a>
         </>
     );
     
