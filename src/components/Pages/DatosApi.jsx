@@ -23,6 +23,7 @@ class DatosApi extends Component {
         .then(dataResponse => {this.setState({posts: dataResponse})});
     }*/
     render() {
+        
         const {posts} = this.state
         return (
             <>

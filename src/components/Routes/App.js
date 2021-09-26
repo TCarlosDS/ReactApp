@@ -1,10 +1,11 @@
 
-import './App.css';
+import '../../assets/css/App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Contenedor from './Contenedor';
-import Formulario from './Formulario';
-import EstudianteDetalle from './EstudianteDetalle';
-import DatosApi from './DatosApi';
+import Contenedor from '../Molecules/Contenedor';
+import Formulario from '../Pages/Formulario';
+import EstudianteDetalle from '../Pages/EstudianteDetalle';
+import DatosApi from '../Pages/DatosApi';
+
 const App = () => (
   <Router>
     <Switch>
