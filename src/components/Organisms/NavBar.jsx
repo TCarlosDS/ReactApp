@@ -20,6 +20,9 @@ const NavBar = () => (
             <li class="nav-item">
             <a class="nav-link" href="/DatosApi">Datos API</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/ChavoApi">Datos API Personajes</a>
+            </li>
         </ul>
     
         </div>

@@ -5,7 +5,7 @@ import Contenedor from '../Molecules/Contenedor';
 import Formulario from '../Pages/Formulario';
 import EstudianteDetalle from '../Pages/EstudianteDetalle';
 import DatosApi from '../Pages/DatosApi';
-
+import ChavoApi from '../Molecules/ElChavoApi'
 const App = () => (
   <Router>
     <Switch>
@@ -14,6 +14,7 @@ const App = () => (
     <Route path="/estudiantes/:id" exact component={ EstudianteDetalle } />
     <Route path="/contacto" exact  component={ Formulario } />
     <Route path="/DatosApi" exact  component={ DatosApi } />
+    <Route path="/ChavoApi" exact  component={ ChavoApi } />
     <Route component={ ()=>(
       <h1>Pagina no encontrada</h1>
     ) } />
